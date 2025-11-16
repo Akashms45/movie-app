@@ -1,10 +1,16 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Home from "./pages/home";
+import { Routes, Route } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { getMovies } from "./api/movies";
+
 function App() {
   return (
     <>
-      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
   );
 }
